@@ -29,7 +29,7 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about',{
-        title:'About the main character in One Piece!',
+        title:'About',
         name:'Monkey D. Luffy'
     })
 })
