@@ -99,3 +99,5 @@ app.listen(port, () => {
 
 //http://localhost:3000/weather?latitude=12.9716&longitude=-77.5946
 //12.9716 -77.5946
+
+//https://shekhar-bhargav-weather-app.herokuapp.com/
