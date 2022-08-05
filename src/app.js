@@ -4,6 +4,8 @@ const hbs = require('hbs')
 const forcast = require('./utils/forecast')
 
 const app = express()
+//to run the weather on heroku 
+const port = process.env.PORT || 3000
 
 //Define paths for express config
 const publicDirectory = path.join(__dirname, '../public')
@@ -87,8 +89,12 @@ app.get('/*', (req, res) => {
 })
 
 //Below line is used to start the application on server
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+// app.listen(3000, () => {
+//     console.log('Server is up on port 3000.')
+// })
+
+app.listen(port, () => {
+    console.log('Server is up on port '+port)
 })
 
 //http://localhost:3000/weather?latitude=12.9716&longitude=-77.5946

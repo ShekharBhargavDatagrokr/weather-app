@@ -22,7 +22,21 @@ weatherForm.addEventListener('submit', (e) => {
     const latitude = search_latitude.value
     const longitude = search_longitude.value
 
-    fetch('http://localhost:3000/weather?latitude='+latitude+'&longitude'+longitude).then((response) => {
+// For locally
+
+//     fetch('http://localhost:3000/weather?latitude='+latitude+'&longitude'+longitude).then((response) => {
+//     response.json().then((data) => {
+//         if(data.error){
+//             messageOne.textContent=data.error
+//         }else{
+//             messageOne.textContent=data.forcast
+//         }
+//     })
+// })
+
+//For Heroku
+
+    fetch('weather?latitude='+latitude+'&longitude'+longitude).then((response) => {
     response.json().then((data) => {
         if(data.error){
             messageOne.textContent=data.error
@@ -31,4 +45,5 @@ weatherForm.addEventListener('submit', (e) => {
         }
     })
 })
+
 })
